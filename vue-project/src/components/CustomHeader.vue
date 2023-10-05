@@ -5,6 +5,7 @@
       <p>Drive Free</p>
     </div>
     <div class="headerLeft">
+      <img width="120" height="80" src="./icons/bird-logo.jpg">
       <a href="#">Louer</a>
       <a href="#">Abonnement</a>
     </div>
@@ -33,6 +34,7 @@ import CustomReservation from "@/components/CustomReservation.vue";
 import CustomPromotions from "@/components/CustomPromotions.vue";
 
 import CustomMap from "@/components/CustomMap.vue";
+import axios from "axios";
 import CustomFooter from "./CustomFooter.vue";
 
 export default {
@@ -43,7 +45,9 @@ export default {
     CustomReservation,
     CustomFooter
   },
-
+  created() {
+    axios.get('http://localhost:9090/reservation');
+  }
 };
 </script>
 

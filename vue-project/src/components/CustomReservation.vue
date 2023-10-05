@@ -52,7 +52,7 @@
       </div>
 
       <div class="buttonReservation">
-        <button @click="changeButtonReservation('Voir les véhicules')">{{buttonClickName}}</button>
+        <a href="AvailableVehicles.vue"><button @click="changeButtonReservation('Voir les véhicules')">{{buttonClickName}}</button></a>
       </div>
     </div>
   </div>
