@@ -37,20 +37,14 @@ export default {}
   gap: 150px;
   margin-top: 60px;
 }
-
 .footerBox {
   background-color: #e5efe5;
 }
 
-.insurance {
+.insurance, .commitment, .payment {
   text-align: center;
 }
-.commitment{
-  text-align: center;
-}
-.payment{
-  text-align: center;
-}
+
 
 
 

@@ -2,7 +2,7 @@
 <CustomHeader />
 
   <div class="vehiclesList">
-    <div
+
   </div>
 </template>
 

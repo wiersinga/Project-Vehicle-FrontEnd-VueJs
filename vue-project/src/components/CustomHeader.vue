@@ -4,6 +4,7 @@
       <img width="120" height="80" src="./icons/bird-logo.jpg">
       <p>Drive Free</p>
     </div>
+
     <div class="headerLeft">
       <img width="120" height="80" src="./icons/bird-logo.jpg">
       <a href="#">Louer</a>
@@ -16,16 +17,16 @@
     </div>
   </div>
   <div class="imgHeader">
-    <CustomReservation />
+    <CustomReservation/>
   </div>
   <div>
-    <CustomPromotions />
+    <CustomPromotions/>
   </div>
   <div>
-    <CustomMap />
+    <CustomMap/>
   </div>
   <div>
-    <CustomFooter />
+    <CustomFooter/>
   </div>
 </template>
 
@@ -62,18 +63,22 @@ export default {
   height: 60px;
   border-radius: 5px;
 }
+
 .headerLeft {
   display: flex;
   align-items: center;
 }
+
 .headerLogo {
   text-align: center;
 
 }
+
 .headerRight {
   display: flex;
   align-items: center;
 }
+
 .headerLeft a,
 .headerRight a {
   margin-left: 20px;
@@ -83,10 +88,10 @@ export default {
   font-size: 25px;
   font-weight: bold;
 }
+
 .headerLeft a:hover,
 .headerRight a:hover {
-  //text-decoration: underline;
-  color: #C9E3CC;
+//text-decoration: underline; color: #C9E3CC;
 }
 
 
