@@ -54,8 +54,8 @@ export default {
         offerDescription:'Lynk & Co 01 à partir de 809£/mois avec DRIVE FREE+'
       },{
         offerImage : '/offerImg3.jpg',
-        offerTitle:'Besoin dun chauffeur ?',
-        offerDescription:'Maintenant vous avez la possibilité de réserver un véhicule ainsi qu\'un Chauffeur porfessionnel'
+        offerTitle:'Besoin d `un chauffeur ?',
+        offerDescription:'Maintenant vous avez la possibilité de réserver un véhicule ainsi qu`un Chauffeur porfessionnel'
       }
       ]
     }

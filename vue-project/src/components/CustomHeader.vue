@@ -1,10 +1,14 @@
 <template>
   <div class="headerBox">
-    <div class="headerLeft">
+    <div class="headerLogo">
       <img width="120" height="80" src="./icons/bird-logo.jpg">
+      <p>Drive Free</p>
+    </div>
+    <div class="headerLeft">
       <a href="#">Louer</a>
       <a href="#">Abonnement</a>
     </div>
+
     <div class="headerRight">
       <a href="#"><img src="./icons/langue-icone.png" width="40" height="40"></a>
       <a href="#">Inscription/Connexion</a>
@@ -19,6 +23,9 @@
   <div>
     <CustomMap />
   </div>
+  <div>
+    <CustomFooter />
+  </div>
 </template>
 
 <script>
@@ -26,13 +33,15 @@ import CustomReservation from "@/components/CustomReservation.vue";
 import CustomPromotions from "@/components/CustomPromotions.vue";
 
 import CustomMap from "@/components/CustomMap.vue";
+import CustomFooter from "./CustomFooter.vue";
 
 export default {
   name: 'CustomHeader',
   components: {
     CustomMap,
     CustomPromotions,
-    CustomReservation
+    CustomReservation,
+    CustomFooter
   },
 
 };
@@ -52,6 +61,10 @@ export default {
 .headerLeft {
   display: flex;
   align-items: center;
+}
+.headerLogo {
+  text-align: center;
+
 }
 .headerRight {
   display: flex;
