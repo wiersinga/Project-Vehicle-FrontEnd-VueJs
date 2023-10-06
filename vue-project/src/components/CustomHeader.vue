@@ -1,15 +1,18 @@
 <template>
   <div class="headerBox">
-    <div class="headerLogo">
-      <img width="120" height="80" src="./icons/bird-logo.jpg">
-      <p>Drive Free</p>
-    </div>
 
-    <div class="headerLeft">
-      <img width="120" height="80" src="./icons/bird-logo.jpg">
-      <a href="#">Louer</a>
-      <a href="#">Abonnement</a>
-    </div>
+
+      <div class="headerLeft">
+
+        <div class="headerLogo">
+          <img width="100" height="60" src="./icons/bird3.png">
+          <p>Drive Free</p>
+        </div>
+        <a href="#">Louer</a>
+        <a href="#">Abonnement</a>
+      </div>
+
+
 
     <div class="headerRight">
       <a href="#"><img src="./icons/langue-icone.png" width="40" height="40"></a>
@@ -66,12 +69,24 @@ export default {
 
 .headerLeft {
   display: flex;
+  text-align-all: start;
   align-items: center;
+
 }
 
 .headerLogo {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-
+  padding-top: 0;
+}
+.headerLogo p{
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: rgb(0, 100, 0);
+  display: flex;
+  flex-direction: column;
 }
 
 .headerRight {
