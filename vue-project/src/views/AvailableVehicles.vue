@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     fetchDataFromAPI() {
-      axios.get(`http://localhost:9090/reservation/availableVehicle/selectedAge/selectedType/selectedPickDate/selectedReturnDate`)
+      axios.get(`http://localhost:8080/vehicle`)
           .then(response => {
             this.vehicles = response.data;
           })
