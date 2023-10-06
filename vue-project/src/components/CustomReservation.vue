@@ -2,8 +2,8 @@
   <div class="img-Reser-Container" :style="{backgroundImage: `url(${ backgroundReser})`,backgroundSize: 'cover', backgroundPosition: '50% 40%'}">
 
     <div class="ageInput">
-      <label for="ageInput">Entrez votre age </label>
-      <select name="ageSelect" id="ageSelect">
+      <label for="ageSelect">Entrez votre age </label>
+      <select name="ageSelect" id="ageSelect" v-model="selectedAge">
         <option value="">--choisissez votre age !--</option>
         <option value="20">18-20</option>
         <option value="25">21-25</option>
@@ -15,17 +15,17 @@
 
       <div class="typeVehicle">
 
-        <div class="car-type" @click="changeBackground('/carT.jpg'), changeButtonReservation('Voir les voitures')">
+        <div class="car-type" @click="changeBackground('/carT.jpg'); changeButtonReservation('Voir les voitures'); selectedVehicleType('Car')">
           <img src="./icons/voiture.png" height="30" width="30">
           <a>Voitures</a>
         </div>
 
-        <div class="moto-type" @click="changeBackground('/motos.jpg'), changeButtonReservation('Voir les motos')">
+        <div class="moto-type" @click="changeBackground('/motos.jpg'); changeButtonReservation('Voir les motos'); selectedVehicleType('Motorcycle')">
           <img src="./icons/moto.png" height="30" width="30">
           <a>Motos</a>
         </div>
 
-        <div class="truck-type" @click="changeBackground('/utilitaires.jpg'), changeButtonReservation('Voir les utilitaires')">
+        <div class="truck-type" @click="changeBackground('/utilitaires.jpg'); changeButtonReservation('Voir les utilitaires');selectedVehicleType('Truck')">
           <img src="./icons/camion.png" height="30" width="30">
           <a>Utilitaires</a>
         </div>
@@ -48,11 +48,19 @@
             <i class="far fa-calendar-alt"></i>
           </div>
         </div>
-        <!--      <p>{{ selectedDate }}</p>-->
       </div>
 
       <div class="buttonReservation">
-        <a href="AvailableVehicles.vue"><button @click="changeButtonReservation('Voir les véhicules')">{{buttonClickName}}</button></a>
+<!--    <button @click="changeButtonReservation('Voir les véhicules')">{{buttonClickName}}</button>-->
+<!--        <button @click="showMyComponent = false"> Voir les résultats</button>-->
+<!--        <AvailableVehicles v-if="showMyComponent" />-->
+        <RouterLink to="/availableVehicles" >
+          <button>Voir les résultats</button>
+        </RouterLink>
+
+
+
+
       </div>
     </div>
   </div>
@@ -60,14 +68,21 @@
 
 
 <script>
+// import AvailableVehicles from "@/components/AvailableVehicles.vue";
+
 export default {
+  components : {
+    // AvailableVehicles
+  },
   data() {
     return {
+      selectedAge: '',
       selectedPickDate: '',
       selectedReturnDate: '',
-      selectedVehicleType: '',
+      selectVehicleType: '',
       backgroundReser: '/carT.jpg',
-      buttonClickName:'Voir les véhicules'
+      buttonClickName:'Voir les véhicules',
+
     };
   },
   methods: {
@@ -76,12 +91,16 @@ export default {
     },
     changeButtonReservation(buttonName){
       this.buttonClickName = buttonName;
+    },
+    selectedVehicleType(selectedType){
+      this.selectVehicleType = selectedType;
     }
-
   }
 };
 </script>
-
+showMyComponent(myComponent){
+this.showMyComponent = myComponent;
+},
 <style scoped>
 .containerReser {
   display: flex;

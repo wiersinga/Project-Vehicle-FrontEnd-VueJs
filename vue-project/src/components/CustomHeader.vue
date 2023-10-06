@@ -29,7 +29,7 @@
     <CustomMap/>
   </div>
   <div>
-    <CustomFooter/>
+
   </div>
 </template>
 
@@ -38,7 +38,6 @@ import CustomReservation from "@/components/CustomReservation.vue";
 import CustomPromotions from "@/components/CustomPromotions.vue";
 
 import CustomMap from "@/components/CustomMap.vue";
-import axios from "axios";
 import CustomFooter from "./CustomFooter.vue";
 
 export default {
@@ -48,9 +47,6 @@ export default {
     CustomPromotions,
     CustomReservation,
     CustomFooter
-  },
-  created() {
-    axios.get('http://localhost:9090/reservation');
   }
 };
 </script>
@@ -106,8 +102,6 @@ export default {
 
 .headerLeft a:hover,
 .headerRight a:hover {
-//text-decoration: underline; color: #C9E3CC;
+
 }
-
-
 </style>
